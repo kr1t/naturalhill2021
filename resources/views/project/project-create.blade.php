@@ -20,7 +20,7 @@
         </div>
         <div class="card-body">
 
-                
+
 
                 <div class="row">
                     <div class="col-lg-6">
@@ -43,11 +43,11 @@
 
                 @if ($message = Session::get('project_success'))
                     <div class="alert alert-success alert-block">
-                        <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>    
+                        <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
-   
+
 
                 @include('includes.form-errors')
 
@@ -60,10 +60,10 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
 
-                      
+
 
                                     <input type="hidden" name="language_id" value="{{$lang_id}}">
-                                    
+
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -96,13 +96,24 @@
                                     </div>
 
 
+                                 <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <strong>{{clean( trans('Review') , array('Attr.EnableID' => true))}}</strong>
+                                                <input type="text" name="review" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
                                     <div class="form-group">
                                         <strong>{{clean( trans('niva-backend.categories') , array('Attr.EnableID' => true))}}</strong>
                                         <select name="project_category_id" id="project_category_id" class="form-control">
                                             <option>{{clean( trans('niva-backend.choose_category') , array('Attr.EnableID' => true))}}</option>
                                             @foreach($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @endforeach 
+                                            @endforeach
                                         </select>
                                     </div>
 
@@ -187,7 +198,7 @@
                                     </div>
 
                                 </div>
-  
+
 
                                 <div class="col-xs-12 col-sm-12 col-md-12 text-right">
                                     <button type="submit" class="btn btn-primary">{{clean( trans('niva-backend.create') , array('Attr.EnableID' => true))}}</button>
@@ -195,7 +206,7 @@
                             </div>
 
                         </form>
-                        
+
                     </div>
                 </div>
 
@@ -207,4 +218,5 @@
 
 
 @endsection
+
 
