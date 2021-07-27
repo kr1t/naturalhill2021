@@ -12,7 +12,7 @@ return [
     'use_package_routes'    => true,
 
     // For laravel 5.1, please set to ['auth']
-    'middlewares'           => ['web','auth'],
+    'middlewares'           => ['web', 'auth'],
 
     // Add prefix for routes
     'prefix'           => 'laravel-filemanager',
@@ -30,7 +30,7 @@ return [
     'shared_folder_name'    => 'shares',
     'thumb_folder_name'     => 'thumbs',
 
-    'images_dir'            => 'public/images/',
+    'images_dir'            => 'images/',
     'images_url'            => '/images/',
     'images_startup_view'   => 'list',
 
