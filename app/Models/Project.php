@@ -27,17 +27,21 @@ class Project extends Model
         'client',
         'button_text',
         'button_link',
+        'review'
     ];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
 
-    public function project_category() {
+    public function project_category()
+    {
         return $this->belongsTo('App\Models\ProjectCategory');
     }
 
-    public function photo() {
+    public function photo()
+    {
         return $this->belongsTo('App\Models\Photo');
     }
 }
