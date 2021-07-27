@@ -30,10 +30,8 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#0">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fab fa-github"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Venor<sup>v2.0</sup></div>
+
+                <div class="sidebar-brand-text mx-3">NaturalHill<sup>Admin</sup></div>
             </a>
 
             <!-- Divider -->

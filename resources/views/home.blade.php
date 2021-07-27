@@ -112,7 +112,7 @@
 </div>
 
 
-<div class="services-section">
+{{-- <div class="services-section">
     <div class="container">
 
         <h3>{!!$homesetting->services_title!!}</h3>
@@ -149,13 +149,14 @@
         </div>
 
     </div>
-</div>
+</div> --}}
 
 <div class="portfolio-section">
     <div class="container">
         <h4>{{$homesetting->projects_subtitle}}</h4>
         <h3>{!!$homesetting->projects_title!!}</h3>
 
+        <h3>{!!$homesetting->ddd!!}</h3>
 
 
         <div class="row">
