@@ -183,7 +183,7 @@
                             </div>
                             <div class="divider"></div>
                             <div class="project-category">
-                                <span class="block_text">{{$project->project_category->name}} </span>
+                                <span class="block_text">{!!$project->review!!} </span>
                             </div>
                         </div>
                     </div>
