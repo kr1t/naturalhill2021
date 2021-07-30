@@ -68,7 +68,7 @@ class HomeController extends Controller
         $data['headerfooter'] = HeaderFooterSetting::find($lang_id);
         $data['homesetting'] = HomeSetting::find($lang_id);
         $data['services'] = Service::where('language_id', $lang_id)->get();
-        $data['projects'] = Project::where('language_id', $lang_id)->latest()->get();
+        $data['projects'] = Project::where('language_id', $lang_id)->inRandomOrder()->limit(5)->get();
         $data['testimonials'] = Testimonial::where('language_id', $lang_id)->get();
         $data['posts'] = Post::where('language_id', $lang_id)->get();
 
