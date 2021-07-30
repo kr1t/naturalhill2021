@@ -50,17 +50,17 @@ use App\Http\Controllers\DashboardController;
 Route::group(['middleware' => 'setlang'], function () {
 
     Auth::routes();
-      
+
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    
-    
+
+
     Route::get('/search', [HomeController::class, 'search'])->name('search');
 
 
 
 
     Route::get('/changelanguage/{lang}', [HomeController::class, 'changeLanguage'])->name('changeLanguage');
-    
+
     Route::get('/about-us', [HomeController::class, 'about'])->name('about');
     Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
     Route::get('/pricing', [HomeController::class, 'pricing'])->name('pricing');
@@ -71,7 +71,6 @@ Route::group(['middleware' => 'setlang'], function () {
     Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
 
     Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
-
 });
 
 
@@ -96,7 +95,7 @@ Route::middleware(['admin'])->group(function () {
 
 
     Route::delete('/delete/users', [UserController::class, 'delete_users'])->name('delete.users');
-    
+
     Route::resource('admin/menu', MenuController::class);
     Route::delete('/delete/menu', [MenuController::class, 'delete_menu'])->name('delete.menu');
 
@@ -114,7 +113,7 @@ Route::middleware(['admin'])->group(function () {
 
     Route::resource('admin/member', MemberController::class);
     Route::delete('/delete/member', [MemberController::class, 'delete_member'])->name('delete.member');
-    
+
     Route::resource('admin/pricing', PricingController::class);
     Route::delete('/delete/pricing', [PricingController::class, 'delete_pricing'])->name('delete.pricing');
 
@@ -152,17 +151,13 @@ Route::middleware(['admin'])->group(function () {
     Route::get('admin/header-footer-settings', [HeaderFooterSettingController::class, 'edit'])->name('headerfooter-setting.edit');
     Route::put('admin/header-footer-settings/{langid}/update', [HeaderFooterSettingController::class, 'update'])->name('headerfooter-setting.update');
     Route::get('admin/header-footer-settings', [HeaderFooterSettingController::class, 'edit'])->name('headerfooter-setting.edit');
-  //  Route::get('/action', [HeaderFooterSettingController::class, 'action'])->name('live_search.action');
-  
+    //  Route::get('/action', [HeaderFooterSettingController::class, 'action'])->name('live_search.action');
+
 
 
 
     Route::get('admin/settings', [SettingController::class, 'edit'])->name('setting.edit');
     Route::put('admin/settings/{langid}/update', [SettingController::class, 'update'])->name('setting.update');
-
-
-
-
 });
 
 
@@ -175,9 +170,10 @@ Route::middleware(['admin'])->group(function () {
 
 
 
-Route::middleware(['XSS'])->group(function () { 
+Route::middleware(['XSS'])->group(function () {
     Route::get('/post/{slug}',  [PostController::class, 'show_slug']);
     Route::get('/project/{slug}',  [ProjectController::class, 'show_slug']);
+    Route::get('/design-houses/{slug}',  [ProjectController::class, 'show_slug']);
+
     Route::get('/{slug}',  [PageController::class, 'show_slug']);
 });
-

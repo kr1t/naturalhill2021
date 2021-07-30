@@ -164,7 +164,7 @@
             @foreach($projects as $key=>$project)
 
             <div class="col-md-6">
-                <a href="{{URL::to('/')}}/project/{{$project->slug}}" title="{{$project->title}}">
+                <a href="{{URL::to('/')}}/design-houses/{{$project->slug}}" title="{{$project->title}}">
                     <div data-tilt data-tilt-gyroscope="false" data-tilt-scale="1.05" data-tilt-speed="200"
                         data-tilt-perspective="700" data-hover="" data-tilt-glare="true" data-tilt-max-glare="0.1"
                         data-tilt-max="30" class="project-box-div">
