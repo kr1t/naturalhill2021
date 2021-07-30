@@ -16,12 +16,12 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-8">
+			<div class="col-md-10 mx-auto">
 				<article class="single-post blogloop-v2">
 					<div class="blog_custom">
-						<div class="post-thumbnail">
+						<div class="post-thumbnail mb-3">
 							<a href="{{URL::to('/')}}/post/{{$post->slug}}">
-								<img class="blog_post_image img-fluid lazy" width="800" height="550"
+								<img class="blog_post_image img-fluid lazy" width="190%" height="550"
 									src="/public/img/loading-blog.gif"
 									data-src="{{$post->photo ? '/images/media/' . $post->photo->file : '/public/img/200x200.png'}}"
 									alt="{{$post->title}}">
@@ -31,11 +31,11 @@
 						<!-- POST DETAILS -->
 						<div class="post-details">
 							<div class="post-details-holder">
-								<div class="post-author-avatar">
+								<!-- <div class="post-author-avatar">
 									<img alt="" src="/public/img/loading-blog.gif"
 										data-src="{{$post->user->photo ? '/images/media/' . $post->user->photo->file : '/public/img/200x200.png'}}"
 										class="avatar img-fluid lazy" height="120" width="120">
-								</div>
+								</div> -->
 
 								<h2 class="post-name">
 									{{$post->title}}
@@ -55,7 +55,7 @@
 				</article>
 			</div>
 
-			<div class="col-md-4">
+			<!-- <div class="col-md-4">
 
 				<div class="widget_element">
 					{!!$blogsettings->html_sidebar1!!}
@@ -65,7 +65,7 @@
 					{!!$blogsettings->html_sidebar2!!}
 				</div>
 
-			</div>
+			</div> -->
 
 		</div>
 
