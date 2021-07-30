@@ -73,12 +73,12 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-6">
+      <div class="col-md-12">
         <h3> {!!$contactsetting->title!!} </h3>
         {!!$contactsetting->iframe_txt!!}
       </div>
 
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
 
         <h3>{!!$contactsetting->form_title!!}</h3>
 
@@ -152,7 +152,7 @@
           <button type="submit" class="btn btn-style1">{!!$contactsetting->button_text!!}</button>
         </form>
 
-      </div>
+      </div> -->
 
 
     </div>

@@ -3625,11 +3625,11 @@ a.popup-vimeo-video:hover {
 }
 
 .iframe-contact iframe {
-        -webkit-filter: grayscale(100%);
+        /* -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
         -o-fi lter: grayscale(100%);
-         filter: grayscale(100%);
+         filter: grayscale(100%); */
         border-radius: 12px;
 }
 

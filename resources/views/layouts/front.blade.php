@@ -236,7 +236,7 @@
                         <div class="inner">
                             <span>{{$headerfooter->footer_col1_subtitle}}</span>
                             <h4>{{$headerfooter->footer_col1_title}}</h4>
-                            <a class="btn btn-style2" href="{{$headerfooter->footer_col1_buttonlink}}"> <span>{{$headerfooter->footer_col1_buttontext}}</span> </a>
+                            <a class="btn btn-style2" href="{{$headerfooter->footer_col1_buttonlink}}" target="_blank"> <span>{{$headerfooter->footer_col1_buttontext}}</span> </a>
                         </div>
                     </div>
                 </div>
