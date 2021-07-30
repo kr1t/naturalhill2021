@@ -4,19 +4,19 @@
 return [
 
 
-	'back_homepage' => 'Back to Home page',
-	'back_testimonial' => 'Back to testimonials',
-	'back_slider' => 'Back to sliders',
-	'back_services' => 'Back to services',
-	'back_projectpage' => 'Back to Project page',
-	'back_categories' => 'Back to categories',
-	'back_pricingpage' => 'Back to Pricing page',
-	'back_blogpage' => 'Back to Blog page',
-	'back_aboutpage' => 'Back to About page',
-	'back_pages' => 'Back to Pages',
-	'back_menu' => 'Back to Menu links',
-	'back_members' => 'Back to Members',
-	'back_media' => 'Back to Media',
+    'back_homepage' => 'Back to Home page',
+    'back_testimonial' => 'Back to testimonials',
+    'back_slider' => 'Back to sliders',
+    'back_services' => 'Back to services',
+    'back_projectpage' => 'Back to Project page',
+    'back_categories' => 'Back to categories',
+    'back_pricingpage' => 'Back to Pricing page',
+    'back_blogpage' => 'Back to Blog page',
+    'back_aboutpage' => 'Back to About page',
+    'back_pages' => 'Back to Pages',
+    'back_menu' => 'Back to Menu links',
+    'back_members' => 'Back to Members',
+    'back_media' => 'Back to Media',
     'back_contact_page' => 'Back to Contact page',
     'back_clients_page' => 'Back to Clients page',
 
@@ -58,11 +58,11 @@ return [
     'create' => 'Create',
     'view_all' => 'View All',
 
-  
+
     'all_testimonials' => 'All testimonials',
     'create_testimonial' => 'Create testimonial',
     'edit_testimonial' => 'Edit testimonial',
-    
+
     'position' => 'Position',
     'facebook' => 'facebook',
     'twitter' => 'twitter',
@@ -71,7 +71,7 @@ return [
     'title' => 'Title',
     'description' => 'Description',
 
-   
+
     'create_slider' => 'Create slider',
     'all_sliders' => 'All sliders',
     'edit_slider' => 'Edit slider',
@@ -80,7 +80,7 @@ return [
     'button_text' => 'Button text',
     'button_link' => 'Button link',
 
-   
+
     'settings' => 'Settings',
     'home_settings' => 'Home Settings',
     'pricing_settings' => 'Pricing Settings',
@@ -88,7 +88,7 @@ return [
     'headerfooter_settings' => 'Header Footer settings',
     'blog_settings' => 'Blog settings',
     'about_settings' => 'About settings',
-    
+
     'enable_disable_schema' => 'Enable or disable Schema',
     'enable_disable_fb_pixel' => 'Enable or disable Facebook Pixel',
     'pixel_code' => 'Facebook Pixel code',
@@ -119,7 +119,7 @@ return [
     'section_4_services' => 'Section - Services',
     'section_5_portfolio' => 'Section - Portfolio',
     'section_6_testimonials' => 'Section - Testimonials',
-    'section_7_blog' => 'Section - Blog', 
+    'section_7_blog' => 'Section - Blog',
     'footer_typed_text_section' => 'Footer Typed text section',
     'section_clients' => 'Section Clients',
     'section_members' => 'Section Members',
@@ -174,7 +174,7 @@ return [
     'create_project' => 'Create project',
     'create_post' => 'Create post',
     'edit_project' => 'Edit project',
-    'duration_project' => 'Duration project',
+    'duration_project' => 'Price',
     'client' => 'Client',
     'clients' => 'Clients',
     'all_pricings' => 'All pricings',
@@ -229,7 +229,7 @@ return [
     'contact_address' => 'Contact address',
     'author' => 'Author',
     'enable_disable_ogg' => 'Enable or disable OGgraph',
-    'enable_disable_anali' => 'Enable or disable analytics', 
+    'enable_disable_anali' => 'Enable or disable analytics',
     'tracking_code' => 'Analytics Tracking Code',
     'enable_disable_schema' => 'Enable or disable SchemaORG',
 
@@ -287,8 +287,8 @@ return [
 
     'no_results' => 'No results',
     'search_text' => 'Try wordpress theme',
-    'you_searched_for' => 'You searched for:', 
+    'you_searched_for' => 'You searched for:',
 
 
-    'start_project_button' => 'Start project button', 
+    'start_project_button' => 'Start project button',
 ];

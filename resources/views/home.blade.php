@@ -23,7 +23,7 @@
 
                             @if($slido->typed_text)
                             <script type="text/javascript">
-                                var arr = {!!$slido-> typed_text!!};
+                                var arr = {!! $slido-> typed_text!!};
                             </script>
                             @endif
 
@@ -184,6 +184,7 @@
                             <div class="divider"></div>
                             <div class="project-category">
                                 <span class="block_text">{!!$project->review!!} </span>
+                                <span>{!! $project->price !!}</span>
                             </div>
                         </div>
                     </div>
