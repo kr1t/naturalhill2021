@@ -27,7 +27,8 @@ class Project extends Model
         'client',
         'button_text',
         'button_link',
-        'review'
+        'review',
+        'price'
     ];
 
     public function user()

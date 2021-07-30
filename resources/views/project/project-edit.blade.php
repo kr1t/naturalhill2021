@@ -110,6 +110,15 @@
                                     </select>
                                 </div>
 
+
+                                <div class="form-group">
+                                    <strong>{{clean( trans('Review') , array('Attr.EnableID' =>
+                                        true))}}</strong>
+                                    <input type="text" name="review" class="form-control" placeholder=""
+                                        value="{{$project->review}}">
+                                </div>
+
+
                                 <div class="form-group">
                                     <strong>{{clean( trans('niva-backend.body') , array('Attr.EnableID' =>
                                         true))}}</strong>
@@ -164,22 +173,22 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <strong>{{clean( trans('niva-backend.duration_project') ,
                                                 array('Attr.EnableID' => true))}}</strong>
-                                            <input type="text" name="date" class="form-control" placeholder=""
-                                                value="{{$project->date}}">
+                                            <input type="text" name="price" class="form-control" placeholder=""
+                                                value="{{$project->price}}">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <div class="form-group">
                                             <strong>{{clean( trans('niva-backend.client') , array('Attr.EnableID' =>
                                                 true))}}</strong>
                                             <input type="text" name="client" class="form-control" placeholder=""
                                                 value="{{$project->client}}">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="row">
