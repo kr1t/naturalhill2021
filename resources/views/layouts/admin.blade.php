@@ -194,8 +194,8 @@
                             href="{{ route('member.index') }}?language=@php echo $lang->code; @endphp">Manage
                             members</a> --}}
                         <a class="collapse-item"
-                            href="{{ route('client.index') }}?language=@php echo $lang->code; @endphp">Manage
-                            clients</a>
+                            href="{{ route('nearby.index') }}?language=@php echo $lang->code; @endphp">Manage
+                            Near By</a>
                         {{-- <a class="collapse-item"
                             href="{{ route('pricing.index') }}?language=@php echo $lang->code; @endphp">Pricing
                             tables</a> --}}

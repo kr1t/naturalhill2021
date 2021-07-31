@@ -29,8 +29,10 @@
                 <p><strong>{{$project->price}}</strong></p>
                 <p><strong>{{$project->project_category->name}}</strong></p>
 
+                @if($project->button_link)
                 <a href="{{$project->button_link}}" target="_blank"
                     class="btn btn-style1"><span>{{$project->button_text}}</span></a>
+                @endif
             </div>
         </div>
 

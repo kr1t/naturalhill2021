@@ -111,6 +111,8 @@ Route::middleware(['admin'])->group(function () {
     Route::delete('/delete/testimonial', [TestimonialController::class, 'delete_testimonial'])->name('delete.testimonial');
 
     Route::resource('admin/client', ClientController::class);
+    Route::resource('admin/nearby', ClientController::class);
+
     Route::delete('/delete/client', [ClientController::class, 'delete_client'])->name('delete.client');
 
     Route::resource('admin/member', MemberController::class);
