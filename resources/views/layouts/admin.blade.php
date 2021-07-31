@@ -192,10 +192,10 @@
                             testimonials</a>
                         {{-- <a class="collapse-item"
                             href="{{ route('member.index') }}?language=@php echo $lang->code; @endphp">Manage
-                            members</a>
+                            members</a> --}}
                         <a class="collapse-item"
                             href="{{ route('client.index') }}?language=@php echo $lang->code; @endphp">Manage
-                            clients</a> --}}
+                            clients</a>
                         {{-- <a class="collapse-item"
                             href="{{ route('pricing.index') }}?language=@php echo $lang->code; @endphp">Pricing
                             tables</a> --}}
