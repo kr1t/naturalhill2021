@@ -76,7 +76,7 @@
                                 <td><img height="100"
                                         src="{{$client->photo ? '/images/media/' . $client->photo->file : '/public/img/200x200.png'}}"
                                         alt="">
-                                    <p class="mb-0 mt-2"><a href="{{ route('client.edit', $client->id) }}">{{clean(
+                                    <p class="mb-0 mt-2"><a href="{{ route('nearby.edit', $client->id) }}">{{clean(
                                             trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p>
                                 </td>
 

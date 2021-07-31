@@ -18,7 +18,7 @@
         </div>
         <div class="card-body">
 
-            <a href="{{route('client.index')}}" class="btn btn-primary btn-back">{{clean(
+            <a href="{{route('nearby.index')}}" class="btn btn-primary btn-back">{{clean(
                 trans('niva-backend.back_clients_page') , array('Attr.EnableID' => true))}}</a>
 
 
@@ -36,7 +36,7 @@
 
                 <div class="col-md-12">
 
-                    <form action="{{route('client.update', $client->id)}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('nearby.update', $client->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -100,22 +100,22 @@
 
 @section('footer')
 <script>
-        ( function ( $ ) {
+    (function ($) {
         'use strict';
-            $( document ).ready( function () {
+        $(document).ready(function () {
 
-                $("input[type='radio']").click(function(){
-                    var radioValue = $(this).val();
-                    if(radioValue == 1){
-                        $(".submeniu-code").removeClass("hide");
-                    }
-                    if(radioValue == 0){
-                        $(".submeniu-code").addClass("hide");
-                    }
-                });
+            $("input[type='radio']").click(function () {
+                var radioValue = $(this).val();
+                if (radioValue == 1) {
+                    $(".submeniu-code").removeClass("hide");
+                }
+                if (radioValue == 0) {
+                    $(".submeniu-code").addClass("hide");
+                }
+            });
 
 
-            })
-        } ( jQuery ) )
+        })
+    }(jQuery))
 </script>
 @endsection
