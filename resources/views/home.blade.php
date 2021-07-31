@@ -184,8 +184,8 @@
                             <div class="divider"></div>
                             <div class="project-category">
                                 <span class="block_text">{!!$project->review!!} </span>
-                                <span>{!! $project->price !!}</span>
                             </div>
+                            <div class="price-tag"><span>{!! $project->price !!}</span></div>
                         </div>
                     </div>
                 </a>

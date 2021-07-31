@@ -25,7 +25,7 @@
     <div class="row">
 
       <div class="col-md-4 d-flex">
-        <div class="contact-element-wrapper h-100 w-100">
+        <div class="contact-element-wrapper h-100 w-100 mt-2">
           <div class="contact-element">
             <div class="icon"> {!!$contactsetting->box_icon1!!}</div>
             <div class="content">
@@ -37,7 +37,7 @@
       </div>
 
       <div class="col-md-4 d-flex">
-        <div class="contact-element-wrapper h-100 w-100">
+        <div class="contact-element-wrapper h-100 w-100 mt-2">
           <div class="contact-element">
             <div class="icon"> {!!$contactsetting->box_icon2!!}</div>
             <div class="content">
@@ -50,7 +50,7 @@
 
 
       <div class="col-md-4 d-flex">
-        <div class="contact-element-wrapper h-100 w-100">
+        <div class="contact-element-wrapper h-100 w-100 mt-2">
           <div class="contact-element">
             <div class="icon"> {!!$contactsetting->box_icon3!!}</div>
             <div class="content">
@@ -159,7 +159,15 @@
   </div>
 </div>
 
-
+<div class="nearby">Nearby places</div>
+<style>
+    .nearby{
+        color: #fff;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 15px;
+    }
+</style>
 
 <div class="clients-section">
   <div class="container">

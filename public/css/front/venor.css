@@ -4227,3 +4227,9 @@ span.cookie-consent__message a:hover {
         left: 60px;
     }
 }
+
+.price-tag{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
