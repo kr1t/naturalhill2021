@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-10 mx-auto">
+			<div class="col-md-8 mx-auto">
 				<article class="single-post blogloop-v2">
 					<div class="blog_custom">
 						<div class="post-thumbnail mb-3">

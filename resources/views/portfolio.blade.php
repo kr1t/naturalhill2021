@@ -38,7 +38,7 @@
                 <div class="projects projects-page row">
 
                     @foreach($projects as $project)
-                    <div class="project col-md-6" data-filter="{{$project->project_category->name}}">
+                    <div class="project col-lg-6 col-md-12 mb-3" data-filter="{{$project->project_category->name}}">
                         <div class="project-inner">
                             <div class="project-thumbnail">
                                 <a href="{{URL::to('/')}}/project/{{$project->slug}}" title=""><img width="400"
@@ -47,10 +47,10 @@
                                         class="img-fluid" alt="{{$project->title}}"></a>
                             </div>
                             <h4 class="entry-details-title"> <a
-                                    href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a></h4>
-                            <h5 class="project-category">{{$project->project_category->name}}</h5>
-                            <span class="review_block_text">{!!$project->review!!} </span>
-                            <h5 class="price-tag">{{$project->price}}</h5>
+                                    href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a><h5 class="project-category project-category_box float-right">{{$project->project_category->name}}</h5></h4>
+
+                            <p class="review_block_text">{!!$project->review!!}<h5 class="price-tag float-right">{{$project->price}}</h5> </p>
+
 
                         </div>
                     </div>

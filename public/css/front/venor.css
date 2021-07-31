@@ -1669,6 +1669,8 @@ h6.service_summary-about::before {
 }
 .gallery img {
     width: 100%;
+    max-height: 320px;
+    object-fit: cover;
     height: auto;
     border-radius: 10px;
 }
@@ -1917,7 +1919,7 @@ color: #fff;
     position: absolute;
     font-weight: 700;
     line-height: 1.2;
-    width: 145px;
+    width: 185px;
     height: 160px;
     bottom: 10px;
     left: -60px;
@@ -2706,7 +2708,6 @@ a.btn.btn-style2:hover {
 }
 
 .simpleParallax-video {
-    margin-right: 30px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -3368,14 +3369,14 @@ a.popup-vimeo-video:hover {
     font-weight: 700;
 }
 .blog-page-section ul#recentcomments li a {
-    color: #6022EA;
+    color: #0e59ff;
 }
 .blog-page-section ul#recentcomments li::before {
     content: '\f075';
     font-family: 'Font Awesome 5 Free';
     position: absolute;
     left: 0;
-    color: #6022EA;
+    color: #0e59ff;
 }
 
 /* PRICING PAGE */
@@ -4230,7 +4231,7 @@ span.cookie-consent__message a:hover {
 
 .price-tag{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin-top: 10px;
     text-align: right;
 }
@@ -4239,4 +4240,64 @@ span.cookie-consent__message a:hover {
     color: #fff;
     font-size: 1.1rem;
     margin-top: 10px;
+}
+@media (max-width: 1200px) {
+    .project-inner .price-tag {
+        font-size: 1.3rem;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 990px) {
+    .review_block_text {
+        display: block;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    .project-inner .price-tag {
+        margin-top: -37px;
+    }
+}
+@media (max-width: 375px) {
+    .project-inner .price-tag {
+        font-size: 1.15rem;
+        padding-top: 5px;
+    }
+}
+.project-inner .price-tag {
+    background-color: #0e59ff;
+    color: #fff;
+    padding: 5px 10px 5px 10px ;
+    border-radius: 10px;
+    margin-top: -47px;
+}
+/* .project-image-container-inner{
+    background-color: #000296;
+    border-radius: 10px;
+}
+.project-image-container-inner img{
+    opacity: 0.4;
+} */
+.price-on-top{
+    position: absolute !important;
+}
+.portfolio-section-filters h5.project-category {
+    margin-top: -30px;
+}
+.project-thumbnail img{
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+.header__logo img {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+}
+
+.project-meta{
+ background-color: #0e0e0eb7;
+ padding: 20px;
+ border-radius: 10px;
 }
