@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Page;
@@ -13,8 +14,8 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\PageRequest;
-use App\Http\Requests\PageEditRequest; 
-use App\Models\HeaderFooterSetting; 
+use App\Http\Requests\PageEditRequest;
+use App\Models\HeaderFooterSetting;
 use App\Models\Setting;
 use App\Models\Menu;
 use App\Models\Photo;
@@ -31,7 +32,7 @@ class PageController extends Controller
 
     public function index(Request $request)
     {
-        
+
 
         $langs = Language::all();
         $lang = Language::where('code', $request->language)->first();
@@ -39,7 +40,7 @@ class PageController extends Controller
 
         //return $lang;
 
-        $data['pages'] = Page::where('language_id', $lang_id)->orderBy('id', 'DESC')->paginate(10);
+        $data['pages'] = Page::where('language_id', $lang_id)->orderBy('id', 'DESC')->paginate(100);
 
         $data['lang_id'] = $lang_id;
 
@@ -69,7 +70,7 @@ class PageController extends Controller
             $data['contact'] = ContactSetting::findOrFail($lang->id);
             $data['blog'] = BlogSetting::findOrFail($lang->id);
         }
-        
+
         //return $data['home'];
         return view('page.page-custom', $data, compact('langs'));
     }
@@ -101,20 +102,20 @@ class PageController extends Controller
         if ($file = $request->file('photo_id')) {
             $name = time() . $file->getClientOriginalName();
             $file->move('images/media/', $name);
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
             $input['photo_id'] = $photo->id;
         }
 
         $user->pages()->create($input);
 
-        return back()->with('page_success','Page created successfully!');
+        return back()->with('page_success', 'Page created successfully!');
     }
 
 
 
     public function edit(Page $page)
     {
-        return view('page.page-edit',compact('page'));
+        return view('page.page-edit', compact('page'));
     }
     /**
      * Update the specified resource in storage.
@@ -125,16 +126,16 @@ class PageController extends Controller
      */
     public function update(PageEditRequest $request, Page $page)
     {
-        
+
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
             $file->move('images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -142,18 +143,19 @@ class PageController extends Controller
 
         $page->update($input);
 
-        return back()->with('page_success','Page updated successfully!');
+        return back()->with('page_success', 'Page updated successfully!');
     }
 
-    public function delete_page(Request $request, Page $page) {
+    public function delete_page(Request $request, Page $page)
+    {
 
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $pages = Page::findOrFail($request->checkbox_array);
             foreach ($pages as $page) {
                 $page->delete();
             }
-            return back()->with('pages_success','Page/s deleted successfully!');
+            return back()->with('pages_success', 'Page/s deleted successfully!');
         } else {
             return back();
         }
@@ -187,14 +189,10 @@ class PageController extends Controller
 
         $page = Page::whereSlug($slug)->where('language_id', $lang_id)->first();
 
-        if(!empty($page)) {
+        if (!empty($page)) {
             return View::make('page', $data, compact('langs'))->with('page', $page);
         } else {
             abort(404);
         }
-        
     }
-
-
-
 }
