@@ -4232,4 +4232,11 @@ span.cookie-consent__message a:hover {
     color: #fff;
     font-size: 1.5rem;
     margin-top: 10px;
+    text-align: right;
+}
+.review_block_text {
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }

@@ -49,6 +49,7 @@
                             <h4 class="entry-details-title"> <a
                                     href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a></h4>
                             <h5 class="project-category">{{$project->project_category->name}}</h5>
+                            <span class="review_block_text">{!!$project->review!!} </span>
                             <h5 class="price-tag">{{$project->price}}</h5>
 
                         </div>
