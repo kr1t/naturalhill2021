@@ -23,11 +23,11 @@
 <div class="about-us">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-5">
+            <div class="col-md-12">
 
                 <div class="simpleParallax-video">
                     <div class="simpleParallax">
-                        <img width="500" height="665" src="/public/img/loading-blog.gif"
+                        <img width="100%" height="665" src="/public/img/loading-blog.gif"
                             class="lazy thumparallax img-fluid" data-src="{{$aboutsetting->about_image}}"
                             alt="about-image">
                     </div>
@@ -36,7 +36,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-12 mt-3">
 
 
                 <h4 class="about-heading1-home">{{$aboutsetting->about_subtitle}}</h4>
