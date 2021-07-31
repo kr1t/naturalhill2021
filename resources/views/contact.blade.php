@@ -24,8 +24,8 @@
 
     <div class="row">
 
-      <div class="col-md-4 d-flex">
-        <div class="contact-element-wrapper h-100 w-100 mt-2">
+      <div class="col-md-4 d-flex mb-2">
+        <div class="contact-element-wrapper h-100 w-100 my-auto">
           <div class="contact-element">
             <div class="icon"> {!!$contactsetting->box_icon1!!}</div>
             <div class="content">
@@ -36,8 +36,8 @@
         </div>
       </div>
 
-      <div class="col-md-4 d-flex">
-        <div class="contact-element-wrapper h-100 w-100 mt-2">
+      <div class="col-md-4 d-flex mb-2">
+        <div class="contact-element-wrapper h-100 w-100 my-auto">
           <div class="contact-element">
             <div class="icon"> {!!$contactsetting->box_icon2!!}</div>
             <div class="content">
@@ -49,8 +49,8 @@
       </div>
 
 
-      <div class="col-md-4 d-flex">
-        <div class="contact-element-wrapper h-100 w-100 mt-2">
+      <div class="col-md-4 d-flex mb-2">
+        <div class="contact-element-wrapper h-100 w-100 my-auto">
           <div class="contact-element">
             <div class="icon"> {!!$contactsetting->box_icon3!!}</div>
             <div class="content">

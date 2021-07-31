@@ -22,7 +22,7 @@
    <div class="container">
       <div class="row">
 
-         <div class="col-md-10 mx-auto">
+         <div class="col-md-8 mx-auto">
 
             @foreach($posts as $post)
             <article class="single-post blogloop-v2">
