@@ -1,16 +1,17 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
-use App\Models\HeaderFooterSetting; 
+use App\Models\HeaderFooterSetting;
 use App\Models\Setting;
 use App\Models\BlogSetting;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\PostRequest; 
-use App\Http\Requests\PostEditRequest; 
+use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostEditRequest;
 use App\Models\Photo;
 use DB;
 use Illuminate\Support\Facades\Auth;
@@ -30,15 +31,12 @@ class PostController extends Controller
         $lang = Language::where('code', $request->language)->first();
         $lang_id = $lang->id;
 
-        //return $lang;
 
         $data['posts'] = Post::where('language_id', $lang_id)->orderBy('id', 'DESC')->paginate(10);
 
         $data['lang_id'] = $lang_id;
 
         return view('post.post-index', $data, compact('langs'));
-
-
     }
 
     public function create(Request $request)
@@ -48,7 +46,7 @@ class PostController extends Controller
         $lang = Language::where('code', $request->language)->first();
         $lang_id = $lang->id;
 
-        $categories = DB::select('select * from categories where language_id='.$lang_id);
+        $categories = DB::select('select * from categories where language_id=' . $lang_id);
         return view('post.post-create', compact('categories', 'langs', 'lang_id'));
     }
 
@@ -68,13 +66,13 @@ class PostController extends Controller
         if ($file = $request->file('photo_id')) {
             $name = time() . $file->getClientOriginalName();
             $file->move('images/media/', $name);
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
             $input['photo_id'] = $photo->id;
         }
 
         $user->posts()->create($input);
 
-        return back()->with('post_success','Post created successfully!');
+        return back()->with('post_success', 'Post created successfully!');
     }
 
 
@@ -85,9 +83,8 @@ class PostController extends Controller
         $lang = Language::where('code', $request->language)->first();
         $lang_id = $lang->id;
 
-        $categories = DB::select('select * from categories where language_id='.$lang_id);
+        $categories = DB::select('select * from categories where language_id=' . $lang_id);
         return view('post.post-edit', compact('post', 'categories'));
-
     }
     /**
      * Update the specified resource in storage.
@@ -98,16 +95,16 @@ class PostController extends Controller
      */
     public function update(PostEditRequest $request, Post $post)
     {
-        
+
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
             $file->move('images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -115,18 +112,19 @@ class PostController extends Controller
 
         $post->update($input);
 
-        return back()->with('post_success','Post updated successfully!');
+        return back()->with('post_success', 'Post updated successfully!');
     }
 
-    public function delete_post(Request $request, Post $post) {
+    public function delete_post(Request $request, Post $post)
+    {
 
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $posts = Post::findOrFail($request->checkbox_array);
             foreach ($posts as $post) {
                 $post->delete();
             }
-            return back()->with('posts_success','Post/s deleted successfully!');
+            return back()->with('posts_success', 'Post/s deleted successfully!');
         } else {
             return back();
         }
@@ -165,14 +163,10 @@ class PostController extends Controller
 
 
 
-        if(!empty($article)) {
+        if (!empty($article)) {
             return View::make('article', $data, compact('langs'))->with('post', $article);
         } else {
             abort(404);
         }
-        
     }
-
-
-
 }
