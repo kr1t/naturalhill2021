@@ -37,12 +37,12 @@
         </div>
 
         <div class="gallery">
-            <div class="row">
+            <div class="row ">
 
                 <div class="col-md-6">
                     <div class="featured-image">
                         <a href="{{$project->img_gal1}}">
-                            <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
+                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal1}}">
                         </a>
                     </div>
@@ -51,7 +51,7 @@
                 <div class="col-md-6">
                     <div class="featured-image">
                         <a href="{{$project->img_gal2}}">
-                            <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
+                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal2}}">
                         </a>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="col-md-6">
                     <div class="featured-image">
                         <a href="{{$project->img_gal3}}">
-                            <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
+                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal3}}">
                         </a>
                     </div>
@@ -69,7 +69,7 @@
                 <div class="col-md-6">
                     <div class="featured-image">
                         <a href="{{$project->img_gal4}}">
-                            <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
+                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal4}}">
                         </a>
                     </div>
@@ -84,28 +84,27 @@
     <h4 class="post-name">Recent Designs</h4>
     <span class="venor-animate-border"></span>
 
-        <div class="row">
-                    @foreach($projects as $project)
-                    <div class="project col-lg-3 col-md-12 mb-3" data-filter="{{$project->project_category->name}}">
-                        <div class="project-inner">
-                            <div class="project-thumbnail">
-                                <a href="{{URL::to('/')}}/project/{{$project->slug}}" title=""><img width="400"
-                                        height="250"
-                                        src="{{$project->photo ? '/images/media/' . $project->photo->file : '/public/img/200x200.png'}}"
-                                        class="img-fluid" alt="{{$project->title}}"></a>
-                            </div>
-                            <h4 class="entry-details-title"> <a
-                                    href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a><h5 class="project-category project-category_box float-right">{{$project->project_category->name}}</h5></h4>
-
-                            <p class="review_block_text">{!!$project->review!!}
-                            @if($project->price)
-                            <h5 class="price-tag float-right">{{$project->price}}</h5>
-                            @endif
-                            </p>
-
+        <div class="projects projects-page portfolio-section-filters row">
+                @foreach($projects as $project)
+                <div class="project col-lg-3 col-md-6 mb-3" data-filter="{{$project->project_category->name}}">
+                    <div class="project-inner">
+                        <div class="project-thumbnail d-flex">
+                            <a href="{{URL::to('/')}}/project/{{$project->slug}}" title=""><img width="400"
+                                    height="250"
+                                    src="{{$project->photo ? '/images/media/' . $project->photo->file : '/public/img/200x200.png'}}"
+                                    class="img-fluid" alt="{{$project->title}}"></a>
                         </div>
+                        <h4 class="entry-details-title" > <a style="font-size: 1.2rem"
+                                href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a><h5 class="project-category project-category_box float-right" style="font-size: 0.7rem">{{$project->project_category->name}}</h5></h4>
+
+                        <p class="review_block_text" style="font-size: 0.8rem">{!!$project->review!!}
+                        @if($project->price)
+                        <h5 class="price-tag-4-col  float-right">{{$project->price}}</h5>
+                        @endif
+                        </p>
                     </div>
-                    @endforeach
+                </div>
+                @endforeach
         </div>
 
     </div>
