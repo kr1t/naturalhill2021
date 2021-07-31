@@ -178,14 +178,14 @@
                             </div>
                         </div>
                         <div class="project-meta">
-                            <div class="project-meta-title">
-                                <span class="project__text">{{$project->title}}</span>
+                            <div class="project-meta-title shadow">
+                                <span class="project__text shadow">{{$project->title}}</span>
                             </div>
                             <div class="divider"></div>
                             <div class="project-category">
-                                <span class="block_text">{!!$project->review!!} </span>
+                                <span class="block_text shadow text-white" style="font-size: 1.1rem">{!!$project->review!!} </span>
                             </div>
-                            <div class="price-tag"><span>{!! $project->price !!}</span></div>
+                            <div class="price-tag shadow"><span>{!! $project->price !!}</span></div>
                         </div>
                     </div>
                 </a>

@@ -203,7 +203,7 @@ a.purchase {
     line-height: 50px;
     text-align: center;
     text-transform: capitalize;
-    background-color: #6022ea;
+    background-color: #0e59ff;
     color: #fff;
     font-size: 16px;
     border-radius: 5px;
@@ -270,17 +270,17 @@ a.purchase:after {
 
 .col-md-12.footer-extra a:hover {
 	background: #324452;
-	color: #fff;	
+	color: #fff;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
 	cursor: pointer;
-	color: #6022ea;
+	color: #0e59ff;
 }
 
 .primary-color {
-	color: #6022ea;
+	color: #0e59ff;
 }
 .logo.col-md-2.col-sm-3.col-xs-12 img {
     max-width: 139px;
@@ -306,10 +306,10 @@ a.purchase:after {
 
 .site-banner .intro-title .primary-color {
 font-weight: 800;
-    color: #6022ea;
+    color: #0e59ff;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #6022ea;
+    -webkit-text-stroke-color: #0e59ff;
     margin-top: 10px;
 }
 .site-banner .intro-desc {
@@ -362,8 +362,8 @@ font-weight: 800;
 }
 .list-homepages .img-item {
 	 border: 1px solid rgb(204 204 204 / 30%);
-} 
-   
+}
+
 
 .section-product .img-item {
 	-webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
@@ -406,7 +406,7 @@ font-weight: 800;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #6022ea;
+    background-color: #0e59ff;
     font-size: 16px;
     font-weight: 800;
     margin: 0;
