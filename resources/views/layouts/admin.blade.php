@@ -30,8 +30,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#0">
-
-                <div class="sidebar-brand-text mx-3">NaturalHill<sup>Admin</sup></div>
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Venor<sup>v2.0</sup></div>
             </a>
 
             <!-- Divider -->
@@ -182,21 +184,21 @@
                         <a class="collapse-item"
                             href="{{ route('slider.index') }}?language=@php echo $lang->code; @endphp">Manage slider
                         </a>
-                        <a class="collapse-item"
+                        {{-- <a class="collapse-item"
                             href="{{ route('service.index') }}?language=@php echo $lang->code; @endphp">Manage
-                            services</a>
+                            services</a> --}}
                         <a class="collapse-item"
                             href="{{ route('testimonial.index') }}?language=@php echo $lang->code; @endphp">Manage
                             testimonials</a>
-                        <a class="collapse-item"
+                        {{-- <a class="collapse-item"
                             href="{{ route('member.index') }}?language=@php echo $lang->code; @endphp">Manage
                             members</a>
                         <a class="collapse-item"
                             href="{{ route('client.index') }}?language=@php echo $lang->code; @endphp">Manage
-                            clients</a>
-                        <a class="collapse-item"
+                            clients</a> --}}
+                        {{-- <a class="collapse-item"
                             href="{{ route('pricing.index') }}?language=@php echo $lang->code; @endphp">Pricing
-                            tables</a>
+                            tables</a> --}}
                     </div>
                 </div>
             </li>

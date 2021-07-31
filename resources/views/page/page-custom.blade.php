@@ -35,7 +35,7 @@
                 </div>
 
 
-    
+
 
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -55,7 +55,7 @@
                             <td class="page-title" >{{$home->meta_title}}<p class="mb-0 mt-2"><a href="{{route('home-setting.edit') . '?language=' . request()->input('language')}}">{{clean( trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p></td>
                             <td class="page-url"><a target="_blank" href="{{URL::to('/')}}">{{URL::to('/')}}</a></td>
 
-                            
+
                         </tr>
                         <tr>
                             <td class="page-title" >{{$about->meta_title}}<p class="mb-0 mt-2"><a href="{{route('about-setting.edit') . '?language=' . request()->input('language')}}">{{clean( trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p></td>
@@ -65,10 +65,7 @@
                             <td class="page-title" >{{$portfolio->meta_title}}<p class="mb-0 mt-2"><a href="{{route('portfolio-setting.edit') . '?language=' . request()->input('language')}}">{{clean( trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p></td>
                             <td class="page-url"><a target="_blank" href="{{URL::to('/')}}/{{$portfolio->slug}}">{{URL::to('/')}}/{{$portfolio->slug}}</a></td>
                         </tr>
-                        <tr>
-                            <td class="page-title" >{{$pricing->meta_title}}<p class="mb-0 mt-2"><a href="{{route('pricing-setting.edit') . '?language=' . request()->input('language')}}">{{clean( trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p></td>
-                            <td class="page-url"><a target="_blank" href="{{URL::to('/')}}/{{$pricing->slug}}">{{URL::to('/')}}/{{$pricing->slug}}</a></td>
-                        </tr>
+
                         <tr>
                             <td class="page-title" >{{$blog->meta_title}}<p class="mb-0 mt-2"><a href="{{route('blog-setting.edit') . '?language=' . request()->input('language')}}">{{clean( trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p></td>
                             <td class="page-url"><a target="_blank" href="{{URL::to('/')}}/{{$blog->slug}}">{{URL::to('/')}}/{{$blog->slug}}</a></td>
@@ -77,14 +74,14 @@
                             <td class="page-title" >{{$contact->meta_title}}<p class="mb-0 mt-2"><a href="{{route('contact-setting.edit') . '?language=' . request()->input('language')}}">{{clean( trans('niva-backend.edit') , array('Attr.EnableID' => true))}}</a></p></td>
                             <td class="page-url"><a target="_blank" href="{{URL::to('/')}}/{{$contact->slug}}">{{URL::to('/')}}/{{$contact->slug}}</a></td>
                         </tr>
-                        
 
 
-                        
+
+
                     </tbody>
                 </table>
 
-       
+
 
             </div>
         </div>
@@ -94,4 +91,5 @@
 <!-- /.container-fluid -->
 
 @stop
+
 
