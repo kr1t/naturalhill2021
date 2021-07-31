@@ -23,10 +23,10 @@
                 {!!$project->body!!}
             </div>
             <div class="col-md-4">
-                <h4 class="post-name">Info </h4>
+                <h4 class="post-name">Info</h4>
                 <span class="venor-animate-border"></span>
 
-                <p><strong>{{$project->price}}</strong></p>
+                <p><strong class="price-tag">{{$project->price}}</strong></p>
                 <p><strong>{{$project->project_category->name}}</strong></p>
 
                 @if($project->button_link)
