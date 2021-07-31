@@ -6,6 +6,8 @@ use App\Models\Setting;
 use App\Models\Menu;
 use App\Models\Slider;
 use App\Models\Project;
+use App\Models\Gallery;
+
 use App\Models\Service;
 use App\Models\Post;
 use App\Models\Testimonial;
@@ -131,6 +133,28 @@ class HomeController extends Controller
         $data['project_categories'] = ProjectCategory::where('language_id', $lang_id)->get();
 
         return view('portfolio', $data, compact('langs'));
+    }
+
+    public function gallery()
+    {
+
+        if (session()->has('lang')) {
+            $currentLang = Language::where('code', session()->get('lang'))->first();
+        } else {
+            $currentLang = Language::where('is_default', 1)->first();
+        }
+        $data['currentLang'] = $currentLang;
+        $lang_id = $currentLang->id;
+        $langs = Language::all();
+
+
+        $data['headerfooter'] = HeaderFooterSetting::find($lang_id);
+        $data['setting'] = Setting::find($lang_id);
+        $data['menus'] = Menu::where('language_id', $lang_id)->get();
+        $data['projects'] = Gallery::get();
+        $data['portfoliosettings'] = PortfolioSetting::find($lang_id);
+
+        return view('gallery', $data, compact('langs'));
     }
     public function blog()
     {

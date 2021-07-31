@@ -113,6 +113,28 @@
             </li>
             @endif
 
+            @if(Auth::user()->role->name == 'administrator')
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/admin" data-toggle="collapse" data-target="#collapseGallery"
+                    aria-expanded="true" aria-controls="collapseGallery">
+                    <i class="fas fa-fw fa-pencil-ruler"></i>
+                    <span>{{clean( trans('Gallery') , array('Attr.EnableID' => true))}}</span>
+                </a>
+                <div id="collapseGallery" class="collapse" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item"
+                            href="{{ route('gallery.index') }}?language=@php echo $lang->code; @endphp">{{clean(
+                            trans('All Galleries') , array('Attr.EnableID' => true))}}</a>
+                        <a class="collapse-item"
+                            href="{{ route('gallery.create') }}?language=@php echo $lang->code; @endphp">{{clean(
+                            trans('Create Gallery') , array('Attr.EnableID' => true))}}</a>
+
+
+                    </div>
+                </div>
+            </li>
+            @endif
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/admin" data-toggle="collapse" data-target="#collapsePosts"
                     aria-expanded="true" aria-controls="collapsePosts">

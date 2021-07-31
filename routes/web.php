@@ -28,6 +28,7 @@ use App\Http\Controllers\ContactSettingController;
 use App\Http\Controllers\HeaderFooterSettingController;
 use App\Http\Controllers\DashboardController;
 
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,7 @@ Route::group(['middleware' => 'setlang'], function () {
     Route::get('/about-us', [HomeController::class, 'about'])->name('about');
     Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
     Route::get('/design-houses', [HomeController::class, 'portfolio'])->name('portfolio');
+    Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 
     Route::get('/pricing', [HomeController::class, 'pricing'])->name('pricing');
     Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
@@ -124,6 +126,9 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('admin/project', ProjectController::class);
     Route::delete('/delete/project', [ProjectController::class, 'delete_project'])->name('delete.project');
 
+    Route::resource('admin/gallery', GalleryController::class);
+    Route::delete('/delete/gallery', [GalleryController::class, 'delete_gallery'])->name('delete.gallery');
+
     Route::resource('admin/language', LanguageController::class);
     Route::delete('/delete/language', [LanguageController::class, 'delete_language'])->name('delete.language');
 
@@ -178,6 +183,7 @@ Route::middleware(['XSS'])->group(function () {
     Route::get('/post/{slug}',  [PostController::class, 'show_slug']);
     Route::get('/project/{slug}',  [ProjectController::class, 'show_slug']);
     Route::get('/design-houses/{slug}',  [ProjectController::class, 'show_slug']);
+    Route::get('/gallery/{slug}',  [GalleryController::class, 'show_slug']);
 
     Route::get('/{slug}',  [PageController::class, 'show_slug']);
 });

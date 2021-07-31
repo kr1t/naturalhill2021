@@ -59,8 +59,9 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function isAdmin(){
-        if($this->role != NULL) {
+    public function isAdmin()
+    {
+        if ($this->role != NULL) {
             if ($this->role->name == "administrator") {
                 return true;
             }
@@ -68,8 +69,9 @@ class User extends Authenticatable
         return false;
     }
 
-    public function isAuthor(){
-        if($this->role != NULL) {
+    public function isAuthor()
+    {
+        if ($this->role != NULL) {
             if ($this->role->name == "author" || $this->role->name == "administrator") {
                 return true;
             }
@@ -77,20 +79,28 @@ class User extends Authenticatable
         return false;
     }
 
-    public function role(){
+    public function role()
+    {
         return $this->belongsTo('App\Models\Role');
     }
-    public function photo(){
+    public function photo()
+    {
         return $this->belongsTo('App\Models\Photo', 'photo_id');
     }
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany('App\Models\Post');
     }
-    public function pages(){
+    public function pages()
+    {
         return $this->hasMany('App\Models\Page');
     }
-    public function projects(){
+    public function projects()
+    {
         return $this->hasMany('App\Models\Project');
     }
-
+    public function galleries()
+    {
+        return $this->hasMany('App\Models\Gallery');
+    }
 }
