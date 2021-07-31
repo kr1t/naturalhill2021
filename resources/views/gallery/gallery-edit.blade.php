@@ -123,7 +123,7 @@
                                                 true))}} 5</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal5 ? $project->img_gal5 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal3" class="form-control" placeholder=""
+                                            <input type="text" name="img_gal5" class="form-control" placeholder=""
                                                 value="{{$project->img_gal5}}">
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                                 true))}} 6</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal6 ? $project->img_gal6 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal4" class="form-control" placeholder=""
+                                            <input type="text" name="img_gal6" class="form-control" placeholder=""
                                                 value="{{$project->img_gal6}}">
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@
                                                 true))}} 7</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal7 ? $project->img_gal7 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal3" class="form-control" placeholder=""
+                                            <input type="text" name="img_gal7" class="form-control" placeholder=""
                                                 value="{{$project->img_gal7}}">
                                         </div>
                                     </div>
@@ -157,7 +157,7 @@
                                                 true))}} 8</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal8 ? $project->img_gal8 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal4" class="form-control" placeholder=""
+                                            <input type="text" name="img_gal8" class="form-control" placeholder=""
                                                 value="{{$project->img_gal8}}">
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@
                                                 true))}} 9</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal9 ? $project->img_gal9 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal3" class="form-control" placeholder=""
+                                            <input type="text" name="img_gal9" class="form-control" placeholder=""
                                                 value="{{$project->img_gal9}}">
                                         </div>
                                     </div>
@@ -180,7 +180,7 @@
                                                 true))}} 10</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal10 ? $project->img_gal10 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal4" class="form-control" placeholder=""
+                                            <input type="text" name="img_gal10" class="form-control" placeholder=""
                                                 value="{{$project->img_gal10}}">
                                         </div>
                                     </div>

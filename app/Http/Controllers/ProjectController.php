@@ -157,9 +157,10 @@ class ProjectController extends Controller
 
 
         $project = Project::whereSlug($slug)->where('language_id', $lang_id)->first();
+        $projects = Project::where('language_id', $lang_id)->where('id', '!=', $project->id)->inRandomOrder()->limit(4)->get();
 
         if (!empty($project)) {
-            return View::make('project', $data, compact('langs'))->with('project', $project);
+            return View::make('project', $data, compact('langs'))->with('project', $project)->with('projects', $projects);
             //return $project;
         } else {
             abort(404);

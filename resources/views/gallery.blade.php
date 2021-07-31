@@ -27,11 +27,11 @@
 
                     @foreach($projects as $project)
                     <div class="project col-md-3">
-                        <div class="project-inner">
+                        <div class="project-inner mt-3">
                             <div class="project-thumbnail">
                                 <a href="{{URL::to('/')}}/gallery/{{$project->slug}}" title=""><img width="400"
                                         height="250"
-                                        src="{{$project->photo ? '/images/media/' . $project->photo->file : '/public/img/200x200.png'}}"
+                                        src="{{$project->img_gal1 ? $project->img_gal1 : '/public/img/200x200.png'}}"
                                         class="img-fluid" alt="{{$project->title}}"></a>
                             </div>
                             <h4 class="entry-details-title"> <a

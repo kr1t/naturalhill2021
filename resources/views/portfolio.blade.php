@@ -49,9 +49,11 @@
                             <h4 class="entry-details-title"> <a
                                     href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a><h5 class="project-category project-category_box float-right">{{$project->project_category->name}}</h5></h4>
 
-                            <p class="review_block_text">{!!$project->review!!}<h5 class="price-tag float-right">{{$project->price}}</h5> </p>
-
-
+                            <p class="review_block_text">{!!$project->review!!}
+                            @if($project->price)
+                            <h5 class="price-tag float-right">{{$project->price}}</h5>
+                            @endif
+                            </p>
                         </div>
                     </div>
                     @endforeach

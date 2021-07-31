@@ -81,9 +81,10 @@ class GalleryController extends Controller
      * @param  \App\Models\project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(GalleryEditRequest $request, Project $project)
+    public function update(GalleryEditRequest $request, Project $gallery)
     {
 
+        $project = $gallery;
         $input = $request->all();
 
         $project->update($input);
