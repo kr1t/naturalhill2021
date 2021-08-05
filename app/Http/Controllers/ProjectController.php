@@ -62,7 +62,7 @@ class ProjectController extends Controller
 
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
             $photo = Photo::create(['file' => $name]);
 
@@ -102,7 +102,7 @@ class ProjectController extends Controller
 
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
             $photo = Photo::create(['file' => $name]);
 

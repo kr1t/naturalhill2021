@@ -1,10 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\ClientRequest; 
+use App\Http\Requests\ClientRequest;
 use App\Models\Photo;
 
 class ClientController extends Controller
@@ -36,25 +37,26 @@ class ClientController extends Controller
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
 
         Client::create($input);
 
-        return back()->with('client_success','Client created successfully!');
+        return back()->with('client_success', 'Client created successfully!');
     }
 
 
 
-    public function edit(Client $client)
+    public function edit(Client $nearby)
     {
+        $client = $nearby;
         return view('client.client-edit', compact('client'));
     }
     /**
@@ -64,18 +66,19 @@ class ClientController extends Controller
      * @param  \App\Models\client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(ClientRequest $request, Client $client)
+    public function update(ClientRequest $request, Client $nearby)
     {
-        
+        $client = $nearby;
+
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -83,18 +86,20 @@ class ClientController extends Controller
 
         $client->update($input);
 
-        return back()->with('client_success','Client updated successfully!');
+        return back()->with('client_success', 'Client updated successfully!');
     }
 
-    public function delete_client(Request $request, Client $client) {
+    public function delete_client(Request $request, Client $nearby)
+    {
 
+        $client = $nearby;
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $clients = Client::findOrFail($request->checkbox_array);
             foreach ($clients as $client) {
                 $client->delete();
             }
-            return back()->with('clients_success','Client/s deleted successfully!');
+            return back()->with('clients_success', 'Client/s deleted successfully!');
         } else {
             return back();
         }
@@ -107,7 +112,4 @@ class ClientController extends Controller
         return back();
         //return 'works';
     }
-
-
-
 }

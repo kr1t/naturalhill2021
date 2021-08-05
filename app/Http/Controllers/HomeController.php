@@ -67,6 +67,7 @@ class HomeController extends Controller
         $data['sliders'] = Slider::where('language_id', $lang_id)->get();
         $data['menus'] = Menu::where('language_id', $lang_id)->get();
         $data['setting'] = Setting::find($lang_id);
+
         $data['headerfooter'] = HeaderFooterSetting::find($lang_id);
         $data['homesetting'] = HomeSetting::find($lang_id);
         $data['services'] = Service::where('language_id', $lang_id)->get();
