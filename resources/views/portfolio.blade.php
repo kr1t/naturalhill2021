@@ -38,7 +38,7 @@
                 <div class="projects projects-page row">
 
                     @foreach($projects as $project)
-                    <div class="project col-lg-6 col-md-12 mb-3" data-filter="{{$project->project_category->name}}">
+                    <div class="project col-lg-6 col-md-12 mb-3 d-flex" data-filter="{{$project->project_category->name}}">
                         <div class="project-inner">
                             <div class="project-thumbnail">
                                 <a href="{{URL::to('/')}}/project/{{$project->slug}}" title=""><img width="400"

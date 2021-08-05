@@ -1978,7 +1978,7 @@ color: #fff;
         -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: translateZ(20px);
-    margin-left: 70px;
+    /* margin-left: 70px; */
     box-shadow: 0 0 0 0 transparent;
     -webkit-box-shadow: 0 0 0 0 transparent;
 }
@@ -4192,7 +4192,7 @@ span.cookie-consent__message a:hover {
         text-align: center;
     }
     .project-box-div, .portfolio-section .project-image {
-        width: 210px;
+        width: 290px;
         height: auto;
     }
     .portfolio-section .col-md-6 {
@@ -4203,6 +4203,7 @@ span.cookie-consent__message a:hover {
         margin-left: auto;
     }
     .portfolio-section .project-meta {
+        left: -30px;
         height: auto;
     }
 
@@ -4235,6 +4236,12 @@ span.cookie-consent__message a:hover {
     margin-top: 10px;
     text-align: right;
 }
+.price-tag-4-col {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-align: right;
+}
 .review_block_text {
     display: block;
     color: #fff;
@@ -4246,6 +4253,10 @@ span.cookie-consent__message a:hover {
         font-size: 1.3rem;
         padding-top: 3px;
     }
+    .project-inner .price-tag-4-col {
+        font-size: 0.7rem;
+        padding-top: 3px;
+    }
 }
 @media (max-width: 990px) {
     .review_block_text {
@@ -4253,8 +4264,10 @@ span.cookie-consent__message a:hover {
         color: #fff;
         font-size: 0.9rem;
     }
-
     .project-inner .price-tag {
+        margin-top: -37px;
+    }
+    .project-inner .price-tag-4-col {
         margin-top: -37px;
     }
 }
@@ -4263,11 +4276,22 @@ span.cookie-consent__message a:hover {
         font-size: 1.15rem;
         padding-top: 5px;
     }
+    .project-inner .price-tag-4-col {
+        font-size: 1.15rem;
+        padding-top: 5px;
+    }
 }
 .project-inner .price-tag {
     background-color: #0e59ff;
     color: #fff;
     padding: 5px 10px 5px 10px ;
+    border-radius: 10px;
+    margin-top: -47px;
+}
+.project-inner .price-tag-4-col {
+    background-color: #0e59ff;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
     border-radius: 10px;
     margin-top: -47px;
 }
@@ -4300,4 +4324,17 @@ span.cookie-consent__message a:hover {
  background-color: #0e0e0eb7;
  padding: 20px;
  border-radius: 10px;
+}
+
+.portfolio-section-filters .project-thumbnail{
+    min-height: 145px;
+}
+
+.portfolio-section-filters .project-thumbnail img {
+    min-height: 145px;
+    object-fit: cover;
+}
+
+.post-thumbnail img{
+    width: 100%;
 }
