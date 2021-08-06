@@ -4338,3 +4338,17 @@ span.cookie-consent__message a:hover {
 .post-thumbnail img{
     width: 100%;
 }
+
+.js-tilt-glare{
+    width: auto !important;
+}
+
+.project-inner h4.entry-details-title a {
+    display: block;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}

@@ -169,7 +169,7 @@
                         data-tilt-perspective="700" data-hover="" data-tilt-glare="true" data-tilt-max-glare="0.1"
                         data-tilt-max="30" class="project-box-div">
 
-                        <div class="project-image-container">
+                        {{-- <div class="project-image-container">
                             <div class="project-image-container-inner">
                                 <img class="project-image lazy" width="410" height="230"
                                     src="/public/img/loading-blog.gif "
@@ -186,7 +186,25 @@
                                 <span class="block_text shadow text-white" style="font-size: 1.1rem">{!!$project->review!!} </span>
                             </div>
                             <div class="price-tag shadow"><span>{!! $project->price !!}</span></div>
+                        </div> --}}
+
+                        <div class="project-inner">
+                            <div class="project-thumbnail">
+                                <a href="{{URL::to('/')}}/project/{{$project->slug}}" title=""><img width="400"
+                                        height="250"
+                                        src="{{$project->photo ? '/images/media/' . $project->photo->file : '/public/img/200x200.png'}}"
+                                        class="img-fluid" alt="{{$project->title}}"></a>
+                            </div>
+                            <h4 class="entry-details-title"> <a
+                                    href="{{URL::to('/')}}/project/{{$project->slug}}">{{$project->title}}</a><h5 class="project-category project-category_box float-right">{{$project->project_category->name}}</h5></h4>
+
+                            <p class="review_block_text">{!!$project->review!!}
+                            @if($project->price)
+                            <h5 class="price-tag float-right">{{$project->price}}</h5>
+                            @endif
+                            </p>
                         </div>
+
                     </div>
                 </a>
             </div>
