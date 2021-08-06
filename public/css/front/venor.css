@@ -4343,6 +4343,13 @@ span.cookie-consent__message a:hover {
     width: auto !important;
 }
 
+.project-inner:hover{
+    border-color: #0e5aff;
+    background-color: #131216;
+    /* outline: none;
+    box-shadow: 0 0 5px #a6c2ff; */
+}
+
 .project-inner h4.entry-details-title a {
     display: block;
     font-size: 22px;
