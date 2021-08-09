@@ -1,10 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\SliderRequest; 
+use App\Http\Requests\SliderRequest;
 use App\Models\Photo;
 use App\Models\Language;
 
@@ -48,19 +49,19 @@ class SliderController extends Controller
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
 
         Slider::create($input);
 
-        return back()->with('slider_success','Slide created successfully!');
+        return back()->with('slider_success', 'Slide created successfully!');
     }
 
 
@@ -78,16 +79,16 @@ class SliderController extends Controller
      */
     public function update(SliderRequest $request, Slider $slider)
     {
-        
+
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -95,18 +96,19 @@ class SliderController extends Controller
 
         $slider->update($input);
 
-        return back()->with('slider_success','Slide updated successfully!');
+        return back()->with('slider_success', 'Slide updated successfully!');
     }
 
-    public function delete_slider(Request $request, Slider $slider) {
+    public function delete_slider(Request $request, Slider $slider)
+    {
 
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $sliders = Slider::findOrFail($request->checkbox_array);
             foreach ($sliders as $slider) {
                 $slider->delete();
             }
-            return back()->with('sliders_success','Slider/s deleted successfully!');
+            return back()->with('sliders_success', 'Slider/s deleted successfully!');
         } else {
             return back();
         }
@@ -119,7 +121,4 @@ class SliderController extends Controller
         return back();
         //return 'works';
     }
-
-
-
 }

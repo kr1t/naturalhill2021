@@ -1,10 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Member;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\MemberRequest; 
+use App\Http\Requests\MemberRequest;
 use App\Models\Photo;
 
 class MemberController extends Controller
@@ -36,19 +37,19 @@ class MemberController extends Controller
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
 
         Member::create($input);
 
-        return back()->with('member_success','Member created successfully!');
+        return back()->with('member_success', 'Member created successfully!');
     }
 
 
@@ -66,16 +67,16 @@ class MemberController extends Controller
      */
     public function update(Request $request, Member $member)
     {
-        
+
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -83,18 +84,19 @@ class MemberController extends Controller
 
         $member->update($input);
 
-        return back()->with('member_success','Member updated successfully!');
+        return back()->with('member_success', 'Member updated successfully!');
     }
 
-    public function delete_member(Request $request, Member $member) {
+    public function delete_member(Request $request, Member $member)
+    {
 
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $members = Member::findOrFail($request->checkbox_array);
             foreach ($members as $member) {
                 $member->delete();
             }
-            return back()->with('members_success','Member/s deleted successfully!');
+            return back()->with('members_success', 'Member/s deleted successfully!');
         } else {
             return back();
         }
@@ -107,7 +109,4 @@ class MemberController extends Controller
         return back();
         //return 'works';
     }
-
-
-
 }
