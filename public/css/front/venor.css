@@ -1669,6 +1669,7 @@ h6.service_summary-about::before {
 }
 .gallery img {
     width: 100%;
+    min-height: 320px;
     max-height: 320px;
     object-fit: cover;
     height: auto;
@@ -4331,7 +4332,8 @@ span.cookie-consent__message a:hover {
 }
 
 .portfolio-section-filters .project-thumbnail img {
-    min-height: 145px;
+    min-height: 210px;
+    max-height: 320px;
     object-fit: cover;
 }
 
