@@ -1,10 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\ServiceRequest; 
+use App\Http\Requests\ServiceRequest;
 use App\Models\Photo;
 use App\Models\Language;
 
@@ -49,19 +50,19 @@ class ServiceController extends Controller
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
 
         Service::create($input);
 
-        return back()->with('service_success','Service created successfully!');
+        return back()->with('service_success', 'Service created successfully!');
     }
 
 
@@ -79,16 +80,16 @@ class ServiceController extends Controller
      */
     public function update(ServiceRequest $request, Service $service)
     {
-        
+
         $input = $request->all();
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -96,18 +97,19 @@ class ServiceController extends Controller
 
         $service->update($input);
 
-        return back()->with('service_success','Service updated successfully!');
+        return back()->with('service_success', 'Service updated successfully!');
     }
 
-    public function delete_service(Request $request, Service $service) {
+    public function delete_service(Request $request, Service $service)
+    {
 
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $services = Service::findOrFail($request->checkbox_array);
             foreach ($services as $service) {
                 $service->delete();
             }
-            return back()->with('services_success','Service/s deleted successfully!');
+            return back()->with('services_success', 'Service/s deleted successfully!');
         } else {
             return back();
         }
@@ -120,7 +122,4 @@ class ServiceController extends Controller
         return back();
         //return 'works';
     }
-
-
-
 }

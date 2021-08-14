@@ -101,7 +101,7 @@ class PageController extends Controller
 
         if ($file = $request->file('photo_id')) {
             $name = time() . $file->getClientOriginalName();
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
             $photo = Photo::create(['file' => $name]);
             $input['photo_id'] = $photo->id;
         }
@@ -133,7 +133,7 @@ class PageController extends Controller
 
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
             $photo = Photo::create(['file' => $name]);
 

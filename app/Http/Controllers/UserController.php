@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Requests\UserRequest; 
-use App\Http\Requests\UserEditRequest; 
+use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserEditRequest;
 use App\Models\Role;
 use App\Models\Photo;
 use Illuminate\Support\Facades\Session;
@@ -22,7 +22,7 @@ class UserController extends Controller
     {
         $users = User::latest()->paginate(5);
 
-        
+
 
         return view('users.index', compact('users'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -48,7 +48,7 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
 
-        if(trim($request->password) == '') {
+        if (trim($request->password) == '') {
             $input = $request->except('password'); //pass everything excerpt the pass field
         } else {
             $input = $request->all();
@@ -56,12 +56,12 @@ class UserController extends Controller
         }
 
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -69,7 +69,7 @@ class UserController extends Controller
 
         User::create($input);
 
-        return redirect('/admin/users/create')->with('user_success','User created successfully!');
+        return redirect('/admin/users/create')->with('user_success', 'User created successfully!');
     }
 
     /**
@@ -103,27 +103,27 @@ class UserController extends Controller
      */
     public function update(UserEditRequest $request, User $user)
     {
-        if(trim($request->password) == '') {
+        if (trim($request->password) == '') {
             $input = $request->except('password'); //pass everything excerpt the pass field
         } else {
             $input = $request->all();
             $input['password'] = bcrypt($request->password);
         }
-     
+
         if ($file = $request->file('photo_id')) {
-            
+
             $name = time() . $file->getClientOriginalName();
 
-            $file->move('images/media/', $name);
+            $file->move(public_path() . '/images/media/', $name);
 
-            $photo = Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
         }
 
         $user->update($input);
 
-        return back()->with('user_success','User updated successfully!');
+        return back()->with('user_success', 'User updated successfully!');
     }
     /**
      * Remove the specified resource from storage.
@@ -138,17 +138,18 @@ class UserController extends Controller
         return redirect('/admin/users');
     }
 
-    public function delete_users(Request $request, User $user) {
+    public function delete_users(Request $request, User $user)
+    {
 
 
-        if(isset($request->delete_all) && !empty($request->checkbox_array)) {
+        if (isset($request->delete_all) && !empty($request->checkbox_array)) {
             $users = User::findOrFail($request->checkbox_array);
             foreach ($users as $user) {
-                if($user->id != $request->current_user){
+                if ($user->id != $request->current_user) {
                     $user->delete();
                 }
             }
-            return back()->with('user_success','User/s deleted successfully! The current user can\'t be deleted!');
+            return back()->with('user_success', 'User/s deleted successfully! The current user can\'t be deleted!');
         } else {
             return redirect('/admin/users');
         }
