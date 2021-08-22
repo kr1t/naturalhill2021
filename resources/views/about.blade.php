@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div class="members-section">
+<!-- <div class="members-section">
     <div class="container">
         <h3 class="members-heading1">{!!$aboutsetting->member_title_section!!}</h3>
 
@@ -85,7 +85,7 @@
         </div>
 
     </div>
-</div>
+</div> -->
 
 <div class="testimonial-section">
 
