@@ -329,10 +329,10 @@
                             <div class="post-category-comment-date">
                                 <span class="post-date"><i class="far fa-clock"></i> {{ date('d.M.Y',
                                     strtotime($post->created_at)) }}</span>
-                                <span class="post-author">
+                                {{-- <span class="post-author">
                                     <i class="far fa-user"></i>
                                     <a href="#0">{{$post->user->name}}</a>
-                                </span>
+                                </span> --}}
                             </div>
 
 

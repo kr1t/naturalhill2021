@@ -26,7 +26,7 @@
                 <div class="projects projects-page row">
 
                     @foreach($projects as $project)
-                    <div class="project col-md-3">
+                    <div class="project col-md-4">
                         <div class="project-inner mt-3">
                             <div class="project-thumbnail">
                                 <a href="{{URL::to('/')}}/gallery/{{$project->slug}}" title=""><img width="400"
