@@ -123,34 +123,19 @@
                                     </div>
 
                                     <div class="row">
+
+                                    @foreach([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] as $n)
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 1</strong>
-                                                <input type="text" name="img_gal1" class="form-control" placeholder="">
+                                                <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} {{ $n }}</strong>
+                                                <input type="text" name="img_gal{{ $n }}" class="form-control" placeholder="">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 2</strong>
-                                                <input type="text" name="img_gal2" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
+
+                                    @endforeach
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 3 </strong>
-                                                <input type="text" name="img_gal3" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}}4 </strong>
-                                                <input type="text" name="img_gal4" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
+
 
                                     <div class="row">
                                         <div class="col-md-12">

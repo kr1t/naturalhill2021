@@ -15,6 +15,7 @@ class Gallery extends Model
         'slug',
         'meta_title',
         'meta_description',
+        'des',
         'img_gal1',
         'img_gal2',
         'img_gal3',

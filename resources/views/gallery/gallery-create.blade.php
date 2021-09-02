@@ -76,6 +76,15 @@
 
 
 
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <strong>Description</strong>
+                                                <textarea name="des" class="form-control" style="height: 200px;"></textarea>
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
 
 
                                     <div class="row">

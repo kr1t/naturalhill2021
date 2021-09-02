@@ -25,8 +25,11 @@
         </div>
 
         <div class="gallery">
-            <div class="row">
+            <div>
+            {!! $project->des !!}
 
+            </div>
+            <div class="row">
                 @if(isset($project->img_gal1))
                 <div class="col-md-6">
                     <div class="featured-image">

@@ -127,50 +127,22 @@
                                 </div>
 
                                 <div class="row">
+                                    @foreach([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] as $n)
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 1</strong>
+                                                true))}} {{ $n }}</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
-                                                src="{{$project->img_gal1 ? $project->img_gal1 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal1" class="form-control" placeholder=""
-                                                value="{{$project->img_gal1}}">
+                                                src="{{$project['img_gal'.$n] ? $project['img_gal'.$n] : '/public/img/200x200.png'}}">
+                                            <input type="text" name="img_gal{{ $n }}" class="form-control" placeholder=""
+                                                value="{{$project['img_gal'.$n] }}">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 2</strong>
-                                            <img class="img-fluid pb-4" width="100" height="100"
-                                                src="{{$project->img_gal2 ? $project->img_gal2 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal2" class="form-control" placeholder=""
-                                                value="{{$project->img_gal2}}">
-                                        </div>
-                                    </div>
+                                    @endforeach
+
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 3</strong>
-                                            <img class="img-fluid pb-4" width="100" height="100"
-                                                src="{{$project->img_gal3 ? $project->img_gal3 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal3" class="form-control" placeholder=""
-                                                value="{{$project->img_gal3}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 4</strong>
-                                            <img class="img-fluid pb-4" width="100" height="100"
-                                                src="{{$project->img_gal4 ? $project->img_gal4 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal4" class="form-control" placeholder=""
-                                                value="{{$project->img_gal4}}">
-                                        </div>
-                                    </div>
-                                </div>
+
 
                                 <div class="row">
                                     <div class="col-md-12">

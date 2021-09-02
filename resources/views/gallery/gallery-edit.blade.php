@@ -68,7 +68,16 @@
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <strong>Description</strong>
+                                            <textarea name="des" class="form-control"
+                                                style="height: 200px;">{{$project->des}}</textarea>
+                                        </div>
+                                    </div>
 
+                                </div>
 
                                 <div class="row">
                                     <div class="col-md-6">
@@ -96,8 +105,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 3</strong>
+                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 3</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal3 ? $project->img_gal3 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal3" class="form-control" placeholder=""
@@ -119,8 +127,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 5</strong>
+                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 5</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal5 ? $project->img_gal5 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal5" class="form-control" placeholder=""
@@ -140,11 +147,10 @@
                                 </div>
 
 
-   <div class="row">
+                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 7</strong>
+                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 7</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal7 ? $project->img_gal7 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal7" class="form-control" placeholder=""
@@ -153,8 +159,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 8</strong>
+                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 8</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal8 ? $project->img_gal8 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal8" class="form-control" placeholder=""
@@ -163,11 +168,10 @@
                                     </div>
                                 </div>
 
-   <div class="row">
+                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 9</strong>
+                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 9</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal9 ? $project->img_gal9 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal9" class="form-control" placeholder=""
@@ -176,8 +180,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' =>
-                                                true))}} 10</strong>
+                                            <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 10</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal10 ? $project->img_gal10 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal10" class="form-control" placeholder=""
@@ -192,16 +195,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.meta_title') , array('Attr.EnableID' =>
-                                                true))}}</strong>
+                                            <strong>{{clean( trans('niva-backend.meta_title') , array('Attr.EnableID' => true))}}</strong>
                                             <input type="text" name="meta_title" class="form-control" placeholder=""
                                                 value="{{$project->meta_title}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <strong>{{clean( trans('niva-backend.meta_description') ,
-                                                array('Attr.EnableID' => true))}}</strong>
+                                            <strong>{{clean( trans('niva-backend.meta_description') ,  array('Attr.EnableID' => true))}}</strong>
                                             <input type="text" name="meta_description" class="form-control"
                                                 placeholder="" value="{{$project->meta_description}}">
                                         </div>
@@ -214,8 +215,7 @@
 
 
                             <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-                                <button type="submit" class="btn btn-primary">{{clean( trans('niva-backend.update') ,
-                                    array('Attr.EnableID' => true))}}</button>
+                                <button type="submit" class="btn btn-primary">{{clean( trans('niva-backend.update') , array('Attr.EnableID' => true))}}</button>
                             </div>
                         </div>
 

@@ -39,41 +39,19 @@
         <div class="gallery">
             <div class="row ">
 
+                @foreach([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] as $n)
+                @if($project['img_gal'.$n])
                 <div class="col-md-6">
                     <div class="featured-image">
-                        <a href="{{$project->img_gal1}}">
+                        <a href="{{$project['img_gal'.$n]}}">
                             <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
-                                data-src="{{$project->img_gal1}}">
+                                data-src="{{$project['img_gal'.$n]}}">
                         </a>
                     </div>
                 </div>
+                @endif
+                @endforeach
 
-                <div class="col-md-6">
-                    <div class="featured-image">
-                        <a href="{{$project->img_gal2}}">
-                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
-                                data-src="{{$project->img_gal2}}">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="featured-image">
-                        <a href="{{$project->img_gal3}}">
-                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
-                                data-src="{{$project->img_gal3}}">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="featured-image">
-                        <a href="{{$project->img_gal4}}">
-                            <img class="img-fluid lazy d-flex" src="/public/img/loading-blog.gif"
-                                data-src="{{$project->img_gal4}}">
-                        </a>
-                    </div>
-                </div>
 
             </div>
 

@@ -36,6 +36,8 @@
                             </div>
                             <h4 class="entry-details-title"> <a
                                     href="{{URL::to('/')}}/gallery/{{$project->slug}}">{{$project->title}}</a></h4>
+                                    <hr>
+                                        {!! $project->des !!}
 
                         </div>
                     </div>

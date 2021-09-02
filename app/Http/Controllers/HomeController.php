@@ -71,7 +71,7 @@ class HomeController extends Controller
         $data['headerfooter'] = HeaderFooterSetting::find($lang_id);
         $data['homesetting'] = HomeSetting::find($lang_id);
         $data['services'] = Service::where('language_id', $lang_id)->get();
-        $data['projects'] = Project::where('language_id', $lang_id)->inRandomOrder()->limit(5)->get();
+        $data['projects'] = Project::where('language_id', $lang_id)->where('slug', '!=', 'Pinery')->inRandomOrder()->limit(5)->get();
         $data['testimonials'] = Testimonial::where('language_id', $lang_id)->get();
         $data['posts'] = Post::where('language_id', $lang_id)->get();
 
@@ -129,7 +129,7 @@ class HomeController extends Controller
         $data['headerfooter'] = HeaderFooterSetting::find($lang_id);
         $data['setting'] = Setting::find($lang_id);
         $data['menus'] = Menu::where('language_id', $lang_id)->get();
-        $data['projects'] = Project::where('language_id', $lang_id)->get();
+        $data['projects'] = Project::where('language_id', $lang_id)->orderBy('price', 'desc')->get();
         $data['portfoliosettings'] = PortfolioSetting::find($lang_id);
         $data['project_categories'] = ProjectCategory::where('language_id', $lang_id)->get();
 

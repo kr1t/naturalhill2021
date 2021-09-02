@@ -184,7 +184,9 @@
 
                         <ul class="dropdown-menu header__lang-dropdown" aria-labelledby="dropdownLang">
                             @foreach ($langs as $key => $lang)
+                            @if($lang->code == 'en')
                             <li><a title="{{$lang->name}}"  href='{{ route('changeLanguage', $lang->code) }}'><img width="16" height="16" src="{{$lang->photo ? '/images/media/' . $lang->photo->file : '/public/img/200x200.png'}}" alt="flag"><span>{{$lang->name}}</span></a></li>
+                            @endif
                             @endforeach
                         </ul>
                     @endif
