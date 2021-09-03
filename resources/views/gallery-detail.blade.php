@@ -38,6 +38,9 @@
                                 data-src="{{$project->img_gal1}}">
                         </a>
                     </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal1}}
+                    </div>
                 </div>
                 @endif
 
@@ -49,6 +52,9 @@
                             <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal2}}">
                         </a>
+                    </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal2}}
                     </div>
                 </div>
                 @endif
@@ -62,6 +68,9 @@
                                 data-src="{{$project->img_gal3}}">
                         </a>
                     </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal3}}
+                    </div>
                 </div>
                 @endif
 
@@ -73,6 +82,9 @@
                             <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal4}}">
                         </a>
+                    </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal4}}
                     </div>
                 </div>
                 @endif
@@ -86,6 +98,9 @@
                                 data-src="{{$project->img_gal5}}">
                         </a>
                     </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal5}}
+                    </div>
                 </div>
                 @endif
 
@@ -98,6 +113,9 @@
                                 data-src="{{$project->img_gal6}}">
                         </a>
                     </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal6}}
+                    </div>
                 </div>
                 @endif
 
@@ -109,6 +127,9 @@
                             <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal7}}">
                         </a>
+                    </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal7}}
                     </div>
                 </div>
                 @endif
@@ -123,6 +144,9 @@
                                 data-src="{{$project->img_gal8}}">
                         </a>
                     </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal8}}
+                    </div>
                 </div>
                 @endif
 
@@ -136,6 +160,9 @@
                                 data-src="{{$project->img_gal9}}">
                         </a>
                     </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal9}}
+                    </div>
                 </div>
                 @endif
 
@@ -146,6 +173,9 @@
                             <img class="img-fluid lazy" src="/public/img/loading-blog.gif"
                                 data-src="{{$project->img_gal10}}">
                         </a>
+                    </div>
+                    <div class="des-gallery">
+                        {{$project->des_img_gal10}}
                     </div>
                 </div>
                 @endif

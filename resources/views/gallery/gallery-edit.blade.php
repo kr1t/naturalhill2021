@@ -86,8 +86,9 @@
                                                 true))}} 1</strong>
                                             <img class="img-fluid pb-4" width="100" height="100"
                                                 src="{{$project->img_gal1 ? $project->img_gal1 : '/public/img/200x200.png'}}">
-                                            <input type="text" name="img_gal1" class="form-control" placeholder=""
-                                                value="{{$project->img_gal1}}">
+                                            <input type="text" name="img_gal1" class="form-control" placeholder=""value="{{$project->img_gal1}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal1" class="form-control" value="{{$project->des_img_gal1}}"></input>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -98,6 +99,8 @@
                                                 src="{{$project->img_gal2 ? $project->img_gal2 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal2" class="form-control" placeholder=""
                                                 value="{{$project->img_gal2}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal2" class="form-control" value="{{$project->des_img_gal2}}"></input>
                                         </div>
                                     </div>
                                 </div>
@@ -110,6 +113,8 @@
                                                 src="{{$project->img_gal3 ? $project->img_gal3 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal3" class="form-control" placeholder=""
                                                 value="{{$project->img_gal3}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal3" class="form-control" value="{{$project->des_img_gal3}}"></input>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -120,6 +125,8 @@
                                                 src="{{$project->img_gal4 ? $project->img_gal4 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal4" class="form-control" placeholder=""
                                                 value="{{$project->img_gal4}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal4" class="form-control" value="{{$project->des_img_gal4}}"></input>
                                         </div>
                                     </div>
                                 </div>
@@ -132,6 +139,8 @@
                                                 src="{{$project->img_gal5 ? $project->img_gal5 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal5" class="form-control" placeholder=""
                                                 value="{{$project->img_gal5}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal5" class="form-control" value="{{$project->des_img_gal5}}"></input>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -142,6 +151,8 @@
                                                 src="{{$project->img_gal6 ? $project->img_gal6 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal6" class="form-control" placeholder=""
                                                 value="{{$project->img_gal6}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal6" class="form-control" value="{{$project->des_img_gal6}}"></input>
                                         </div>
                                     </div>
                                 </div>
@@ -155,6 +166,8 @@
                                                 src="{{$project->img_gal7 ? $project->img_gal7 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal7" class="form-control" placeholder=""
                                                 value="{{$project->img_gal7}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal7" class="form-control" value="{{$project->des_img_gal7}}"></input>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -164,6 +177,8 @@
                                                 src="{{$project->img_gal8 ? $project->img_gal8 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal8" class="form-control" placeholder=""
                                                 value="{{$project->img_gal8}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal8" class="form-control" value="{{$project->des_img_gal8}}"></input>
                                         </div>
                                     </div>
                                 </div>
@@ -176,6 +191,8 @@
                                                 src="{{$project->img_gal9 ? $project->img_gal9 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal9" class="form-control" placeholder=""
                                                 value="{{$project->img_gal9}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal9" class="form-control" value="{{$project->des_img_gal9}}"></input>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -185,6 +202,8 @@
                                                 src="{{$project->img_gal10 ? $project->img_gal10 : '/public/img/200x200.png'}}">
                                             <input type="text" name="img_gal10" class="form-control" placeholder=""
                                                 value="{{$project->img_gal10}}">
+                                            <strong class="mt-3">Description</strong>
+                                            <input name="des_img_gal10" class="form-control" value="{{$project->des_img_gal10}}"></input>
                                         </div>
                                     </div>
                                 </div>

@@ -83,7 +83,7 @@
                                                 <textarea name="des" class="form-control" style="height: 200px;"></textarea>
                                             </div>
                                         </div>
-                                     
+
                                     </div>
 
 
@@ -92,12 +92,16 @@
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 1</strong>
                                                 <input type="text" name="img_gal1" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal1" class="form-control"></input>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 2</strong>
                                                 <input type="text" name="img_gal2" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal2" class="form-control"></input>
                                             </div>
                                         </div>
                                     </div>
@@ -107,12 +111,16 @@
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 3 </strong>
                                                 <input type="text" name="img_gal3" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal3" class="form-control"></input>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}}4 </strong>
                                                 <input type="text" name="img_gal4" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal4" class="form-control"></input>
                                             </div>
                                         </div>
                                     </div>
@@ -122,13 +130,17 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 5 </strong>
-                                                <input type="text" name="img_gal6" class="form-control" placeholder="">
+                                                <input type="text" name="img_gal5" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal5" class="form-control"></input>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}}6 </strong>
-                                                <input type="text" name="img_gal5" class="form-control" placeholder="">
+                                                <input type="text" name="img_gal6" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal6" class="form-control"></input>
                                             </div>
                                         </div>
                                     </div>
@@ -139,12 +151,16 @@
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 7 </strong>
                                                 <input type="text" name="img_gal7" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal7" class="form-control"></input>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}}8 </strong>
                                                 <input type="text" name="img_gal8" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal8" class="form-control"></input>
                                             </div>
                                         </div>
                                     </div>
@@ -156,12 +172,16 @@
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}} 9 </strong>
                                                 <input type="text" name="img_gal9" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal9" class="form-control"></input>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <strong>{{clean( trans('niva-backend.photo') , array('Attr.EnableID' => true))}}10 </strong>
                                                 <input type="text" name="img_gal10" class="form-control" placeholder="">
+                                                <strong class="mt-3">Description</strong>
+                                                <input name="des_img_gal10" class="form-control"></input>
                                             </div>
                                         </div>
                                     </div>

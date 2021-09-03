@@ -2927,6 +2927,7 @@ a.popup-vimeo-video:hover {
     border-bottom: 1px solid #222227;
 }
 .project-inner {
+    width: 100%;
     border: 1px solid #222227;
     padding: 20px;
     border-radius: 12px;
@@ -4363,4 +4364,18 @@ span.cookie-consent__message a:hover {
     color: #fff;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+.des-gallery{
+    color: rgb(214, 214, 214) !important;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+
+p {
+    color: #fff !important;
+}
+
+hr{
+    background-color: #ffffff1a !important;
 }

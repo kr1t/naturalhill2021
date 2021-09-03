@@ -37,8 +37,7 @@
                             <h4 class="entry-details-title"> <a
                                     href="{{URL::to('/')}}/gallery/{{$project->slug}}">{{$project->title}}</a></h4>
                                     <hr>
-                                        {!! $project->des !!}
-
+                                    <p class="des-gallery">{!! $project->des !!}</p>
                         </div>
                     </div>
                     @endforeach

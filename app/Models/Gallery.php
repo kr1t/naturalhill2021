@@ -25,7 +25,17 @@ class Gallery extends Model
         'img_gal7',
         'img_gal8',
         'img_gal9',
-        'img_gal10'
+        'img_gal10',
+        'des_img_gal1',
+        'des_img_gal2',
+        'des_img_gal3',
+        'des_img_gal4',
+        'des_img_gal5',
+        'des_img_gal6',
+        'des_img_gal7',
+        'des_img_gal8',
+        'des_img_gal9',
+        'des_img_gal10',
     ];
 
     public function user()
